@@ -1,51 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sabores de Helados</title>
     <link rel="stylesheet" href="styles.css"> <!-- Si necesitas estilos -->
 </head>
+
 <body>
     <h1>Sabores de Helados</h1>
     <form id="saboresForm">
         <ul>
-            <% const sabores = [
-                "Vainilla", "Chocolate", "Fresa", "Menta", "Café",
-                "Nuez", "Coco", "Limón", "Mora", "Frambuesa",
-                "Caramelo", "Tiramisu", "Pistacho", "Galleta", "Dulce de leche",
-                "Maracuyá", "Kiwi", "Mango", "Cereza", "Piña",
-                "Café con leche", "Naranja", "Mandarina", "Té verde", "Chocolate blanco",
-                "Ginger", "Choco menta", "Yogur", "Nutella", "Bubulubu",
-                "Chicle", "Malta", "Cacao", "Rosa", "Violeta",
-                "Castaña", "Café irlandés", "Turrón", "Chocoramo", "Pera",
-                "Manzana", "Papelón", "Aguacate", "Almendra", "Tamarindo",
-                "Café expreso", "Soursop", "Limoncillo", "Cereza negra", "Higo"
-            ]; %>
-            <% for (let i = 0; i < sabores.length; i++) { %>
-                <li>
-                    <label>
-                        <input type="checkbox" name="sabores" value="<%= sabores[i] %>">
-                        <%= sabores[i] %>
-                    </label>
-                </li>
-            <% } %>
+            <% const sabores=[ "Limón" , "Limón granizado" , "Ananá" , "Frutilla" , "Durazno"
+                , "Mousse de limón con frutilla" , "Banana" , "Frutos del bosque" , "Frambuesa" , "Cereza a la panna"
+                , "Crema del cielo" , "Tramontana" , "Crema americana" , "Flan con dulce de leche" , "Crema Oreo"
+                , "Crema vainilla" , "Banana split" , "Bananita dolca" , "Crema rusa" , "Granizado"
+                , "San bayón con cereza" , "Crema de almendras" , "Crema rockets" , "Crema de coco" , "Mantecol"
+                , "Mascarpone" , "Menta granizada" , "Kinotos al whisky" , "Sambayón" , "Sambayón granizado"
+                , "Frutillas a la crema" , "Vainilla con pasas al Rhum" , "Dulce de leche con nuez" , "Dulce de leche"
+                , "Dulce de leche tramontana" , "Dulce de leche bombón" , "manjar de dulce de leche"
+                , "Dulce de leche granizado" , "Chocolate" , "Chocolate marroc" , "Chocolate con almendras"
+                , "Chocolate granizado" , "Chocolate blanco" , "Chocolate con pasas al rhum" , "Chocolate amargo"
+                , "Chocolate Bariloche" , "Chocolate tentación" , "Chocolate Kinder" , "Mousse de chocolate", ]; %>
+                <% for (let i=0; i < sabores.length; i++) { %>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="sabores" value="<%= sabores[i] %>">
+                            <%= sabores[i] %>
+                        </label>
+                    </li>
+                    <% } %>
         </ul>
         <button type="button" id="actualizarBtn">Actualizar</button>
     </form>
 
     <script>
-        document.getElementById('actualizarBtn').addEventListener('click', function() {
+        document.getElementById('actualizarBtn').addEventListener('click', function () {
             const checkboxes = document.querySelectorAll('input[name="sabores"]:checked');
             const seleccionados = Array.from(checkboxes).map(checkbox => checkbox.value);
             console.log("Sabores seleccionados:", seleccionados);
-            
+
             // Almacenar los sabores seleccionados en localStorage
             localStorage.setItem('saboresSeleccionados', JSON.stringify(seleccionados));
-            
+
             // Redirigir a index.ejs
             window.location.href = 'index.ejs'; // Asegúrate de que la ruta sea correcta
         });
     </script>
 </body>
+
 </html>

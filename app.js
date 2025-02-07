@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname,"public")));
 
 app.use("/",routsControl);
 app.use("/error404",routsControl);
-app.use("/nosotros",routsControl);
+app.use("/ctrlgustos",routsControl);
 app.use("/servicios",routsControl);
 app.use("/contacto",routsControl);
 

@@ -5,7 +5,7 @@ const {principal,error404,vista1,vista2,vista3}=require("../controllers/routscon
 routsControl=express.Router();
 
 routsControl.get("/", principal);
-routsControl.get("/nosotros",vista1)
+routsControl.get("/ctrlgustos",vista1)
 routsControl.get("/servicios",vista2)
 routsControl.get("/contacto",vista3)
 routsControl.get("/error404",error404);
