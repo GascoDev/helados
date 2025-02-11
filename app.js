@@ -2,6 +2,7 @@ const express=require("express");
 const app=express();
 //Require de las rutas//
 const routsControl=require("./routes/routs");
+const indexRouter = require('./routes/index');
 
 //Requerir dotenv
 require("dotenv").config();
@@ -14,7 +15,7 @@ const path=require("path");
 app.set("views", path.join(__dirname,"views"));
 app.set("view engine",".ejs");
 app.use(express.static(path.join(__dirname,"public")));
-
+app.use('/', indexRouter);
 app.use("/",routsControl);
 app.use("/error404",routsControl);
 app.use("/ctrlgustos",routsControl);
