@@ -1,4 +1,3 @@
-// src/controllers/ctrlgustos.js
 const sabores = [
     "Limón", "Limón granizado", "Ananá", "Frutilla", "Durazno",
     "Mousse de limón con frutilla", "Banana", "Frutos del bosque", 

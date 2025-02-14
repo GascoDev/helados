@@ -398,3 +398,62 @@ footer a:hover {
         padding: 15px; /* Menos espaciado en pantallas pequeñas */
     }
 }
+
+.flavors-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.flavor {
+    flex: 1 1 calc(33.33% - 10px); /* Tres columnas */
+    margin: 5px;
+    padding: 10px;
+    background-color: #ffe4e1;
+    text-align: center;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    color: red;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .flavor {
+        flex: 1 1 100%; /* Una columna */
+    }
+}
+
+h2 {
+    text-align: center; /* Centra el texto del encabezado */
+    margin-bottom: 20px; /* Espacio debajo del encabezado */
+}
+
+.qr-container {
+    display: flex;
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    flex-wrap: wrap; /* Permite que las imágenes se alineen en varias filas si es necesario */
+}
+
+.imagen-responsive2 {
+     /* Limita el ancho máximo de las imágenes */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    margin: 0 10px; /* Espacio horizontal entre las imágenes */
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .qr-container {
+        flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
+        align-items: center; /* Centra las imágenes en la columna */
+    }
+
+    .imagen-responsive2 {
+        margin: 10px 0; /* Espacio vertical entre las imágenes */
+        max-width: 100%; /* Asegura que las imágenes no excedan el ancho del contenedor */
+    }
+}

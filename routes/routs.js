@@ -6,7 +6,7 @@ routsControl=express.Router();
 
 routsControl.get("/", principal);
 routsControl.get("/ctrlgustos",vista1)
-routsControl.get("/servicios",vista2)
+routsControl.get("/sabores",vista2)
 routsControl.get("/contacto",vista3)
 routsControl.get("/error404",error404);
 
