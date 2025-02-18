@@ -443,7 +443,7 @@ h2 {
      /* Limita el ancho máximo de las imágenes */
     height: auto; /* Mantiene la proporción de las imágenes */
     margin: 0 10px; /* Espacio horizontal entre las imágenes */
-    margin-bottom: 10px;
+    margin-bottom: ;
 }
 
 @media (max-width: 768px) {
